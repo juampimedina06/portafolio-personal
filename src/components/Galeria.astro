@@ -1,0 +1,177 @@
+---
+import Github from "../icons/Github.astro";
+import Link from "../icons/Link.astro";
+
+const {imagen, titulo, informacion, href, github} = Astro.props;
+---
+
+    <div class="contenedor-proyecto">
+        <div class="contenedor_imagen">
+            <img class="rounded-lg" src={imagen} alt="imagen del proyecto">
+        </div>
+        <div class="contenedor_contenido">
+            <h2>{titulo}</h2>
+            <p>{informacion}</p>
+            <slot name="contenido-galeria" />
+            <div class="contenedor_links">
+                <a 
+                    class="github" 
+                    target="_blank" 
+                    href={github}><Github 
+                    class="h-10 w-6" />
+                    codigo
+                </a>
+                <a 
+                    class="link"
+                    target="_blank"  
+                    href={href}><Link class="h-10 w-7"/>
+                    Visitar
+                </a>
+            </div>
+        </div>
+    </div>
+
+<style>
+    
+    @media (max-width: 900px) {
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .contenedor-proyecto{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+    height:;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition:0.3s ;
+    background: linear-gradient(rgba(65, 67, 161, 0.281), rgba(0, 0, 0, 0.123) 60%);
+    border: 1.8px solid rgba(59, 60, 110, 0.993);
+    }
+
+    .contenedor_contenido{
+        margin: 1rem 0 0 0;
+    }
+}
+    
+    .contenedor-proyecto{
+    position: relative;
+    display: flex;
+    margin: 1rem 0 2rem 0;
+    height: auto;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition:0.3s ;
+    background: linear-gradient(rgba(65, 67, 161, 0.281), rgba(0, 0, 0, 0.123) 60%);
+    border: 1.8px solid rgba(59, 60, 110, 0.993);
+    }
+    .contenedor-proyecto:hover{
+    background: linear-gradient(rgba(66, 68, 160, 0.658), rgba(0, 0, 0, 0.123) 60%);
+    border: 1.8px solid rgba(119, 121, 238, 0.993); /* Borde más visible */
+    transition: .3s;
+        img{
+            scale: 1.05;
+            transition: .3s;
+        }
+        a{
+            text-shadow: 0px 0px 5px rgba(119, 121, 238, 0.993);
+        }
+        .github svg, .link svg {
+    filter: drop-shadow(0px 0px 5px rgba(119, 121, 238, 0.993));
+}
+    }
+    
+    .contenedor_imagen{
+        height: 100%;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        position: relative;
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .contenedor_contenido{
+        width: 100%;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h2{
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin: 0 0 .5rem;
+        color: #ffffff;
+        padding: 0 1rem 0 0;
+        opacity: 90%;
+    }
+    p{
+        color:#ffffff;
+        font-size: .9rem;
+        font-weight: 500;
+        line-height: 1.4rem;
+        margin: 0px 0px 1rem;
+        padding: 0 1rem 0 0;
+        opacity: 90%;
+    }
+
+    .contenedor_links{
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    a{
+        display: flex;
+        height: 2.3rem;
+        gap: .7rem;
+        align-items: center;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        color:  rgba(119, 121, 238, 0.993);
+        cursor: pointer;
+        border: 1px solid  rgba(119, 121, 238, 0.993);
+    }
+    a:hover{
+        background-color: rgba(66, 68, 160, 0.322);
+        color: #fff;
+        transition: .3s;
+    }
+
+    
+
+
+
+
+
+    /*.contenedor-proyecto{
+    position: relative;
+    display: flex;
+    margin: 1rem 0 2rem 0;
+    height: 17rem;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition:0.3s ;
+    background: linear-gradient(rgba(65, 67, 161, 0.281), rgba(0, 0, 0, 0.123) 60%);
+    border: 1.8px solid rgba(59, 60, 110, 0.993);
+    }*/
+
+</style>

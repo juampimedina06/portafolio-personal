@@ -1,0 +1,144 @@
+---
+
+---
+
+<form class="formulario" action="https://formsubmit.co/jpmedinagomez@sapsalesianos.com.ar" method="POST" >
+    <fieldset class="formulario__fieldset">        
+        <input type="text" id="nombreFormulario" name="nombre" class="formulario__input" placeholder="Tu nombre">
+
+    <div class="formulario__grupo">
+        <div class="input_correo">
+            <input type="tel" id="telefono" name="telefono" class="formulario__input formulario__input--mitad" placeholder="Telefono">
+        </div>
+
+        <div class="input_telefono">
+            <input type="email" id="correo" name="correo" class="formulario__input formulario__input--mitad" placeholder="Correo">
+        </div>
+    </div>
+
+    <input type="text" id="tema" name="tema" class="formulario__input" placeholder="Asunto">
+
+    <label for="asunto" class="formulario__label">Tema</label>
+    <textarea id="asunto" name="Tema" rows="4" class="formulario__textarea"></textarea>
+
+    <div class="contenedor_boton">
+        <button class="boton_enviar" id="enviarBoton" type="submit" > Enviar</button>
+    </div>
+    </fieldset>
+</form>
+
+<style>
+
+.formulario {
+    padding: 20px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.formulario__fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+.formulario__legend {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff; /* Cambié el color de la leyenda */
+}
+
+.formulario__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff; /* Color blanco */
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.formulario__input, .formulario__textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border: none;
+    box-shadow: 0 2px 3px -2px rgba(119, 121, 238, 0.993);
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.formulario__textarea {
+    box-shadow: 0 0px 2px rgba(119, 121, 238, 0.993);
+    border-radius: .5rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+    resize: none;
+}
+
+.formulario__grupo {
+    display: flex;
+    gap: 1rem;
+}
+
+.input_telefono, .input_correo {
+    width: 100%;
+}
+
+.formulario__input--mitad {
+    width: 100%;
+}
+
+.formulario__input:focus {
+    border-bottom: 2px solid rgba(119, 121, 238, 0.993);
+    outline: none;
+}
+
+#asunto:focus {
+    border: 2px solid rgba(119, 121, 238, 0.993);
+}
+
+.contenedor_boton {
+    display: flex;
+    justify-content: center;
+}
+
+.boton_enviar {
+    border-radius: 1rem;
+    background: linear-gradient(rgba(65, 67, 161, 0.281), rgba(0, 0, 0, 0.123) 60%);
+    border: 1.8px solid rgba(59, 60, 110, 0.993);
+    box-shadow: 0 4px 16px rgba(64, 57, 168, 0.1);
+    color: #fff;
+    padding: .3rem 4rem;
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-bottom: 4rem;
+}
+
+.boton_enviar:hover {
+    box-shadow: 0 8px 24px rgba(50, 62, 168, 0.397);
+    background: linear-gradient(rgba(66, 68, 160, 0.658), rgba(0, 0, 0, 0.123) 60%);
+    border: 1.8px solid rgba(119, 121, 238, 0.993); /* Borde más visible */
+    transition: .3s;
+}
+
+
+@media(max-width:1200px){
+    .formulario{
+        width: 70%;
+    }
+}
+
+@media(max-width:900px){
+    .formulario{
+        width: 100%;
+    }
+}
+
+
+</style>
+

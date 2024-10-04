@@ -1,0 +1,186 @@
+
+<style>
+    a::before {
+      content: '';
+      display: block;
+      margin-left: auto;
+      
+    }
+  
+    a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #ffffff;
+      display: block;
+      transition: width 0.5s;
+    }
+
+    a:hover::after, a:hover::before {
+      width: 100%;
+      background-color: #fff;
+    }
+
+    /* Estilos por defecto del header */
+header {
+  top: 20px;
+  position: fixed;
+  z-index: 10;
+}
+
+
+input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            display: none;
+            padding: 15px 0;
+            background-color: #00010a;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: rgba(0, 0, 0, 0.705);
+            border-bottom: 1px solid #fff;
+            display: none;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        input[type="checkbox"]:checked ~ .content {
+            max-height: 300px; /* Ajusta este valor según el contenido */
+            padding: 10px;
+        }
+
+        .responsive {
+            display: none;
+            color: #ffffff;
+            padding: 8px 10px;
+            text-decoration: none;
+        }
+
+        .responsive:hover {
+            background-color: #ddd;
+        }
+
+        .menu{
+          border: 2px solid #fff;
+          border-radius:4px;
+          margin:0 0 0 1rem;
+          display: none;
+        }
+
+
+/* Estilos que se aplicarán cuando hagas scroll */
+
+@media(max-width:655px){
+  #main-header{
+    display: none;
+  }
+
+  .acordion{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+
+  input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            display: block;
+            padding: 15px 0;
+            background-color: #00010a;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: rgba(0, 0, 0, 0.705);
+            border-bottom: 1px solid #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        input[type="checkbox"]:checked ~ .content {
+            max-height: 300px; /* Ajusta este valor según el contenido */
+            padding: 10px;
+        }
+
+        .responsive {
+            display: block;
+            color: #ffffff;
+            padding: 8px 10px;
+            text-decoration: none;
+        }
+
+        .responsive:hover {
+            background-color: #ddd;
+        }
+
+        .menu{
+          border: 2px solid #fff;
+          border-radius:4px;
+          margin:0 0 0 1rem;
+          display: flex;
+        }
+}
+
+
+  </style>
+
+
+
+
+<header  class="flex justify-center items-center py-5 w-[100%] mx-auto">
+    <nav id="main-header" class="flex flex-row gap-x-10">
+        <a href="#Top" class="font-light text-white no-underline text-[18px]  font-poppins relative transition-colors duration-500 opacity-80 hover:opacity-100 hover:text-[#fff] after:content-[''] after:block after:w-0 after:h-[2px] after:bg-white after:transition-[width] after:duration-500 hover:after:w-full">
+            Inicio
+        </a>
+        <a href="#Proyectos" class="font-light text-white no-underline text-[18px]  font-poppins relative transition-colors duration-500 opacity-80 hover:opacity-100 hover:text-[#fff] after:content-[''] after:block after:w-0 after:h-[2px] after:bg-white after:transition-[width] after:duration-500 hover:after:w-full">
+            Proyectos
+        </a>
+        <a href="#SobreMi" class="font-light text-white no-underline text-[18px]  font-poppins relative transition-colors duration-500 opacity-80 hover:opacity-100 hover:text-[#fff] after:content-[''] after:block after:w-0 after:h-[2px] after:bg-white after:transition-[width] after:duration-500 hover:after:w-full">
+          Sobre Mi
+      </a>
+        <a href="#Habilidades" class="font-light text-white no-underline text-[18px]  font-poppins relative transition-colors duration-500 opacity-80 hover:opacity-100 hover:text-[#fff] after:content-[''] after:block after:w-0 after:h-[2px] after:bg-white after:transition-[width] after:duration-500 hover:after:w-full">
+          Habilidades
+      </a>
+        <a href="#Contacto" class="font-light text-white no-underline text-[18px]  font-poppins relative transition-colors duration-500 opacity-80 hover:opacity-100 hover:text-[#fff] after:content-[''] after:block after:w-0 after:h-[2px] after:bg-white after:transition-[width] after:duration-500 hover:after:w-full">
+            Contacto
+        </a>
+    </nav>
+</header>
+
+<div class="acordion">
+  <input type="checkbox" id="toggle">
+  <div>
+    <label for="toggle">
+      <svg class="menu"  xmlns="http://www.w3.org/2000/svg"  width="34"  height="34"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+    </label>
+  </div>
+  
+  <div class="content">
+        <a href="#Top" class="block py-2 px-3 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 responsive" aria-current="page">Inico</a>
+        <a href="#Proyectos" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent responsive">Proyectos</a>
+        <a href="#SobreMi" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent responsive">SobreMi</a>
+        <a href="#Habilidades" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent responsive">Habilidades</a>
+        <a href="#Contacto" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent responsive">Contacto</a>
+  </div>
+</div>

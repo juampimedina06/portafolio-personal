@@ -1,0 +1,255 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+import Linkedin from '../icons/Linkedin.astro';
+import Descarga from '../icons/Descarga.astro';
+import Mail from '../icons/Mail.astro';
+import Github from '../icons/Github.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Titulo from '../components/Titulo.astro';
+import Html from '../icons/Html.astro';
+import Css from '../icons/Css.astro';
+import JavaScript from '../icons/JavaScript.astro';
+import Educacion from '../icons/Educacion.astro';
+import CardEducation from '../components/CardEducation.astro';
+import Galeria from '../components/Galeria.astro';
+import Sobremi from '../components/Sobremi.astro';
+import Mi from '../icons/Mi.astro';
+import Js from '../icons/Js.astro';
+import Phtml from '../components/Phtml.astro';
+import Bostrap from '../icons/Bostrap.astro';
+import Conocimientos from '../components/Conocimientos.astro';
+import Habilidades from '../icons/Habilidades.astro';
+import Formulario from '../components/Formulario.astro';
+import Contacto from '../icons/Contacto.astro'
+---
+
+<Layout title="Portafolio de Juan Pablo Medina - Desarrollador y Programador Web">
+	
+	<main class="px-4">
+		<img src="traje.png" alt="Imagen detrás de todo" class="absolute inset-0 object-cover z-[-1] fade-bottom" />
+
+		<SectionContainer  id="Top" class="py-40">
+		    <h1 class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-10">
+			Juan Pablo Medina<a
+			    href="https://www.linkedin.com/in/juan-pablo-medina-199b3b2b4/"
+			    target="_blank"
+			    rel="noopener"
+			    class="flex justify-center items-center">
+				<Badge >Disponible para trabajar</Badge>
+			    </a>
+		    </h1>
+		    <h2 class="text-xl lg:text-2xl text-wrap">Desarrollador Web Front-End de Córdoba, Argentina. <span class="span">Actualmente participando en la formación de Oracle en Alura Latam</span>, enfocado en crear experiencias web modernas.</h2>
+			<nav class="flex gap-x-4 mt-7 flex-wrap">
+				<Card href="cv-juampi.pdf" download="cv-juampi.pdf" class="card">
+				  <Descarga class="w-6 h-6" />
+				  Curriculum
+				</Card>
+				<Card href="https://www.linkedin.com/in/juan-pablo-medina-199b3b2b4/" class="card">
+				  <Linkedin class="w-6 h-6" />
+				  Linkedin
+				</Card>
+				<Card href="https://github.com/juampimedina06" class="card">
+				  <Github class="w-6 h-6"/>
+				  GitHub
+				</Card>
+				<Card href="mailto:jpmedinagomez1@gmail.com" class="card">
+				  <Mail />
+				  jpmedinagomez1@gmail.com
+				</Card>
+			  </nav>
+			  
+        </SectionContainer>
+
+		<SectionContainer id="Proyectos">
+            <Titulo titulo="Proyectos">
+				<JavaScript />
+			</Titulo>
+			<Galeria
+			        href="https://juampimedina06.github.io/encriptador-texto/"
+			        github="https://github.com/juampimedina06/encriptador-texto"
+			        imagen="proyecto-alura.png" 
+			        titulo="Encriptador de Texto - Alura Latam" 
+					informacion="Proyecto desarrollado como challenge de Alura Latam. Permite encriptar y desencriptar mensajes de texto mediante un algoritmo personalizado. La interfaz es intuitiva y fácil de usar, enfocada en ofrecer una solución práctica y eficiente para la protección de mensajes..">
+				
+                    <div class="contenedor_lenguajes" slot="contenido-galeria">
+                        <Phtml lenguaje="Html">
+							<Html class="w-6"/>
+						</Phtml>
+						<Phtml lenguaje="Css">
+							<Css class="w-6" />
+						</Phtml>
+                        <Phtml lenguaje="JavaScript">
+							<Js class="w-6" />
+						</Phtml>
+					</div>
+			</Galeria>
+
+			<Galeria 
+			        href="https://juampimedina06.github.io/obtener-clima/"
+			        github="https://github.com/juampimedina06/obtener-clima"
+			        imagen="proyecto-clima.png" 
+			        titulo="Obtener clima del Pais - API" 
+					informacion="aplicación interactiva que consulta una API de clima en tiempo real, proporcionando datos precisos como temperatura, condiciones meteorológicas y pronósticos..">
+
+					<div class="contenedor_lenguajes" slot="contenido-galeria">
+                        <Phtml lenguaje="Html">
+							<Html class="w-6"/>
+						</Phtml>
+						<Phtml lenguaje="Css">
+							<Css class="w-6" />
+						</Phtml>
+                        <Phtml lenguaje="JavaScript">
+							<Js class="w-6" />
+						</Phtml>
+					</div>
+			</Galeria>
+
+			<Galeria
+			        github="https://github.com/juampimedina06/pagina-shark"
+					href="https://juampimedina06.github.io/pagina-shark/"
+			        imagen="proyecto-shark.png" 
+			        titulo="Copia estatica de pagina Shark - tomas maza" 
+					informacion="Este proyecto fue realizado como parte de la formación de Junior Achievement. Consiste en la clonación de una pagina web, replicando fielmente su diseño, estructura base los conocimientos adquiridos ">
+
+					<div class="contenedor_lenguajes" slot="contenido-galeria">
+                        <Phtml lenguaje="Html">
+							<Html class="w-6"/>
+						</Phtml>
+						<Phtml lenguaje="Css">
+							<Css class="w-6" />
+						</Phtml>
+						<Phtml lenguaje="Bootstrap">
+							<Bostrap class="w-8 h-6" />
+						</Phtml>
+					</div>
+			</Galeria>
+		</SectionContainer> 
+
+		<SectionContainer id="SobreMi">
+			<Titulo titulo="SobreMi">
+                <Mi />
+			</Titulo>
+			<Sobremi 
+			    parrafo_one="Soy Juan Pablo Medina, nacido en Córdoba, Argentina 🇦🇷. Me dedico al desarrollo front-end y actualmente estoy en plena formación con Oracle en Alura Latam, donde continúo perfeccionando mis habilidades. Empecé mi camino en la programación con tecnologías como JavaScript, HTML y CSS, pero hoy trabajo con herramientas modernas como Astro y React para crear experiencias web más dinámicas y eficientes."
+				parrafo_two="Siempre estoy dispuesto a tomar riesgos y aprender algo nuevo, lo que me permitió crecer rápidamente y enfrentar desafíos técnicos en proyectos diversos. Además, tengo una mentalidad proactiva y me gusta trabajar en equipo, sabiendo que la colaboración es clave para lograr grandes resultados."
+				parrafo_three="En este momento, estoy enfocado en seguir mejorando mis habilidades como desarrollador, buscando proyectos que me permitan aplicar lo aprendido y seguir creciendo en este apasionante mundo del desarrollo web."
+			/>
+		</SectionContainer>
+
+		<SectionContainer id="Habilidades">
+			<Titulo titulo="Habilidades">
+				<Habilidades class="w-12 h-12" />
+			</Titulo>
+			<Conocimientos />
+		</SectionContainer>
+		
+
+        <SectionContainer class="">
+			<Titulo titulo="Educacion">
+				<Educacion class="w-12" />
+			</Titulo>
+			<div class="contenedor_educacion">
+				<div class="fila_uno">
+					<CardEducation 
+						academia="Formación ONE de Alura y Oracle" 
+						tiempo="Junio 2024 - Actualidad" 
+						aprendido="Lógica de programación. Front-End + (IA), React y Soft Skills." 
+						imagen="educacion-alura.png" />
+						
+					<CardEducation 
+						academia="Curso Integral Capacitando" 
+						tiempo="Abril 2024 - Agosto 2024" 
+						aprendido="Fundamentos de programación, JAVA orientado a objetos + SQL." 
+						imagen="educacion-integral.png" />
+				</div>
+				<div class="fila_dos">
+					<CardEducation 
+						academia="Junior Achievement y Microsoft" 
+						tiempo="Mayo 2024 - Junio 2024" 
+						aprendido="HTML, CSS, Bootstrap, JavaScript + creación de página web." 
+						imagen="educacion-junior.png" />
+						
+					<CardEducation 
+						academia="Autodidacta" 
+						tiempo="Permanente" 
+						aprendido="Continúo aprendiendo de forma autodidacta sobre diversas tecnologías." 
+						imagen="educacion-autodidacta.png" />
+				</div>
+			</div>
+			
+		</SectionContainer>
+
+		<SectionContainer id="Contacto">
+			<Titulo titulo="Contacto">
+				<Contacto class="w-12 h-12"/>
+			</Titulo>
+			<Formulario/>
+		</SectionContainer>
+
+		
+	</main>
+</Layout>
+
+<style>
+	.contenedor_lenguajes{
+        display: flex;
+		gap: 1rem;
+	}
+	
+	.fade-bottom {
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
+    top: 10rem;
+    left: 36rem;
+	width: 39rem;
+    }
+
+	.span{
+		color:rgba(143, 144, 223, 0.884);
+	}
+
+
+	@media(max-width: 1000px) {
+		.fade-bottom {
+	top:8rem;
+	left: 20rem;
+    }
+	}
+
+
+	@media(max-width:700px){
+	.fade-bottom {
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
+	    margin: 5rem 0 0 0;
+	    top:0;
+	    left: 0;
+    }
+
+	.fila_uno,
+    .fila_dos{
+	flex-direction: column;
+}
+
+	}
+
+	nav {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en filas si no caben */
+  gap: 1rem; /* Espacio entre los elementos, puedes ajustar el valor */
+}
+
+.contenedor_educacion{
+	display: flex;
+	flex-direction: column;
+}
+
+.fila_uno,
+.fila_dos{
+	width: 100%;
+	display: flex;
+	gap:1rem;
+}
+
+</style>
+

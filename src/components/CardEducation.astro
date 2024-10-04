@@ -1,0 +1,103 @@
+---
+    const {academia, tiempo, aprendido, imagen } = Astro.props;
+---
+
+<div class="contenedor_contenido">
+    <div class="contenido">
+        <div class="titulo">
+            <h2 class="academia">{academia}</h2>
+            <h3 class="informacion">{aprendido}</h3>
+        </div>
+        <div class="contenedor_tiempo">
+            <p class="tiempo">{tiempo}</p>
+        </div>
+    </div>
+    <div class="contenedor_imagen">
+        <img src={imagen} alt="">
+    </div>
+</div>
+
+<style>
+
+.contenedor_contenido {
+    position: relative; 
+    display: flex;
+    background: linear-gradient(rgba(65, 67, 161, 0.281), rgba(0, 0, 0, 0.123) 60%);
+    border: 1.8px solid rgba(59, 60, 110, 0.993);
+    height: 9.5rem;
+    width: 100%;
+    margin: 1rem 0 1rem 0;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(64, 57, 168, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.3s ease;
+}
+
+@media (max-width:700px){
+    .contenedor_contenido {
+    margin: 0rem 0 1rem 0;
+}
+}
+
+.contenedor_contenido:hover {
+    box-shadow: 0 8px 24px rgba(50, 62, 168, 0.397);
+    background: linear-gradient(rgba(66, 68, 160, 0.658), rgba(0, 0, 0, 0.123) 60%);
+    border: 1.8px solid rgba(119, 121, 238, 0.993); /* Borde más visible */
+    transition: .3s;
+    .contenedor_imagen img{
+        transform: scale(1.02) translate(-5%, -10%);
+        transition: .3s;
+    }
+}
+
+.contenido {
+    position: relative;
+    z-index: 1; 
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.academia {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+}
+
+.contenedor_tiempo {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+}
+
+.tiempo {
+    font-size: .8rem;
+    opacity: 70%;
+}
+
+.contenedor_imagen {
+    position: absolute;
+    top: 2rem;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.contenedor_imagen img {
+    height: 80%;
+    object-fit: cover;
+    opacity: .4;
+    
+}
+
+</style>

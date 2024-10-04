@@ -1,0 +1,18 @@
+<span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0 lg:py-1 dark:bg-green-900 dark:text-green-300 rounded-lg transition duration-300">
+    <slot />
+</span>
+
+<style>
+    span {
+        background-color: transparent; /* Fondo transparente por defecto */
+        border: 1px solid #67f190;
+        transition: background-color 0.3s ease; /* Para que la transición del fondo sea suave */
+    }
+
+
+    span:hover {
+        background-color: #67f190; /* Fondo al hacer hover */
+        color: rgb(0, 0, 0);
+    }
+</style>
+

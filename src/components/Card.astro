@@ -1,0 +1,20 @@
+
+<a  class="rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 bg-white/5 transition duration-500"  
+    {... Astro.props}
+	target="_blank"
+	>
+    <slot />
+</a>
+
+
+<style>
+    
+
+a:hover {
+    border: 1px solid rgba(255, 255, 255, 0.596);
+    transition: .5s;
+    background: rgba(87, 87, 87, 0.308);
+}
+
+
+</style>

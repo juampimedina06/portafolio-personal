@@ -1,0 +1,52 @@
+---
+import "@fontsource/onest/500.css";
+import Header from "../components/header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="bienvenido gente este es un portafolio" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="relative h-full w-full bg-slate-950">
+		<div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]  z-[-1]"></div>
+		<Header />
+		<slot />
+		<Footer />		
+	</body>
+</html>
+
+<style is:global>
+
+	
+	:root {
+		color-scheme: light dark;
+	}
+	html {
+		font-family: "Onest", sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	body{
+        flex-direction: column;
+		min-height: 100vh;
+		display: flex;
+	}
+
+	@media (prefers-reduce-motion: reduce){
+		scroll-behavior: auto;
+	}
+</style>
+
