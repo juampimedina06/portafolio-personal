@@ -1,5 +1,24 @@
 
 <style>
+
+#main-header {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px); 
+}
+
+/* Estilos que se aplicarán cuando hagas scroll */
+.header-scrolled {
+  width: 100%;
+  padding: 1.5rem;
+  top: -2.6rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.726);
+}
+
+
+
     a::before {
       content: '';
       display: block;
@@ -22,11 +41,11 @@
     }
 
     /* Estilos por defecto del header */
-header {
-  top: 20px;
-  position: fixed;
-  z-index: 10;
-}
+    header {
+      top: 20px;
+      position: fixed;
+      z-index: 10;
+    }
 
 
 input[type="checkbox"] {
@@ -141,14 +160,24 @@ input[type="checkbox"] {
           display: flex;
         }
 }
-
-
   </style>
 
+<script>
+      // @ts-nocheck
 
+  window.addEventListener('scroll', function() {
+  const header = document.getElementById('main-header');
+  
+  if (window.scrollY > 50) { // Cuando el scroll supera los 50px
+    header.classList.add('header-scrolled');
+  } else {
+    header.classList.remove('header-scrolled');
+  }
+});
 
+</script>
 
-<header  class="flex justify-center items-center py-5 w-[100%] mx-auto">
+<header  class="flex justify-center items-center py-5 w-[100%]">
     <nav id="main-header" class="flex flex-row gap-x-10">
         <a href="#Top" class="font-light text-white no-underline text-[18px]  font-poppins relative transition-colors duration-500 opacity-80 hover:opacity-100 hover:text-[#fff] after:content-[''] after:block after:w-0 after:h-[2px] after:bg-white after:transition-[width] after:duration-500 hover:after:w-full">
             Inicio

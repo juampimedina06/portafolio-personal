@@ -30,7 +30,7 @@ import Contacto from '../icons/Contacto.astro'
 	<main class="px-4">
 		<img src="traje.png" alt="Imagen detrás de todo" class="absolute inset-0 object-cover z-[-1] fade-bottom" />
 
-		<SectionContainer  id="Top" class="py-40">
+		<SectionContainer  id="Top" class="py-52">
 		    <h1 class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-10">
 			Juan Pablo Medina<a
 			    href="https://www.linkedin.com/in/juan-pablo-medina-199b3b2b4/"
@@ -41,6 +41,7 @@ import Contacto from '../icons/Contacto.astro'
 			    </a>
 		    </h1>
 		    <h2 class="text-xl lg:text-2xl text-wrap">Desarrollador Web Front-End de Córdoba, Argentina. <span class="span">Actualmente participando en la formación de Oracle en Alura Latam</span>, enfocado en crear experiencias web modernas.</h2>
+			
 			<nav class="flex gap-x-4 mt-7 flex-wrap">
 				<Card href="cv-juampi.pdf" download="cv-juampi.pdf" class="card">
 				  <Descarga class="w-6 h-6" />
@@ -200,13 +201,13 @@ import Contacto from '../icons/Contacto.astro'
 	
 	.fade-bottom {
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
-    top: 10rem;
+    top: 7rem;
     left: 36rem;
 	width: 39rem;
     }
 
 	.span{
-		color:rgba(143, 144, 223, 0.884);
+		font-weight: 900;
 	}
 
 

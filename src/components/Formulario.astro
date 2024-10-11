@@ -2,21 +2,96 @@
 
 ---
 
-<form class="formulario" action="https://formsubmit.co/jpmedinagomez@sapsalesianos.com.ar" method="POST" >
+<script>
+    // @ts-nocheck
+
+    const form = document.getElementById('form');
+
+    const nombre = document.getElementById('nombreFormulario');
+    const nombreError = document.querySelector("#nombreFormulario + span.error");
+
+    const email = document.getElementById('correoFormulario');
+    const emailError = document.querySelector("#correoFormulario + span.error");
+
+form.addEventListener("submit", function (event) {
+  if(!nombre.validity.valid){
+    showError();
+    event.preventDefault();
+  }
+
+
+  if (!email.validity.valid){
+    showError();
+    event.preventDefault();
+  }
+
+});
+
+function showError() {
+  if (email.validity.valueMissing) {
+    // Si el campo está vacío
+    // muestra el mensaje de error siguiente.
+    emailError.textContent =
+      "Debe introducir una dirección de correo electrónico.";
+  } else if (email.validity.typeMismatch) {
+    // Si el campo no contiene una dirección de correo electrónico
+    // muestra el mensaje de error siguiente.
+    emailError.textContent =
+      "El valor introducido debe ser una dirección de correo electrónico.";
+  }
+
+  if(nombre.validity.tooShort){
+    nombreError.textContent = "Debe contener al menos 6 caracteres";
+  }
+
+  // Establece el estilo 
+  emailError.className = "error activo";
+  nombreError.className = "error activo";
+
+
+}
+
+</script>
+
+<form novalidate class="formulario" id="form" action="https://formsubmit.co/jpmedinagomez@sapsalesianos.com.ar" method="POST" >
     <fieldset class="formulario__fieldset">        
-        <input type="text" id="nombreFormulario" name="nombre" class="formulario__input" placeholder="Tu nombre">
+        <input type="text" 
+                id="nombreFormulario" 
+                name="nombre" 
+                class="formulario__input" 
+                placeholder="Tu nombre"
+                required minlength="6"> <!-- al menos 6 caracteres -->
+                <span class="error" aria-live="polite"></span>
+
 
     <div class="formulario__grupo">
         <div class="input_correo">
-            <input type="tel" id="telefono" name="telefono" class="formulario__input formulario__input--mitad" placeholder="Telefono">
+            <input  type="tel" 
+                    id="telefono" 
+                    name="telefono" 
+                    class="formulario__input formulario__input--mitad" 
+                    placeholder="Telefono">
+                    <span class="error" aria-live="polite"></span>
+
         </div>
 
         <div class="input_telefono">
-            <input type="email" id="correo" name="correo" class="formulario__input formulario__input--mitad" placeholder="Correo">
+            <input  type="email" 
+                    id="correoFormulario" 
+                    name="correo" 
+                    class="formulario__input formulario__input--mitad" 
+                    placeholder="Correo"
+                    required>
+                    <span class="error" aria-live="polite"></span>
+
         </div>
     </div>
 
-    <input type="text" id="tema" name="tema" class="formulario__input" placeholder="Asunto">
+    <input  type="text" 
+            id="tema" 
+            name="tema" 
+            class="formulario__input" 
+            placeholder="Asunto">
 
     <label for="asunto" class="formulario__label">Tema</label>
     <textarea id="asunto" name="Tema" rows="4" class="formulario__textarea"></textarea>
@@ -139,6 +214,18 @@
     }
 }
 
+.error {
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color: rgb(255, 5, 5);
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+  }
+  
+  .error.active {
+    padding:0.3rem;
+  }
 
 </style>
 
