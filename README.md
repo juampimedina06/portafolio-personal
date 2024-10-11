@@ -19,6 +19,8 @@
 - APIs
 - Astro
 
+  ?branch= [![Netlify Status](https://api.netlify.com/api/v1/badges/4ee2b1a4-01e4-407b-8a5a-75d7f3441451/deploy-status)](https://app.netlify.com/sites/portafolio-juan-pablo-medina/deploys)
+
 ## 📖 ¿Cómo Clonar Este Repositorio?
 
 Para clonar este repositorio, utiliza el siguiente comando:
@@ -26,4 +28,3 @@ Para clonar este repositorio, utiliza el siguiente comando:
 ```bash
 git clone https://github.com/tu_usuario/tu_repositorio.git
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4ee2b1a4-01e4-407b-8a5a-75d7f344/deploy-status)](https://app.netlify.com/sites/tu-sitio/deploys)
