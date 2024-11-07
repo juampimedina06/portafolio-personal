@@ -19,7 +19,7 @@
 - APIs
 - Astro
 
-  ?branch= [![Netlify Status](https://api.netlify.com/api/v1/badges/4ee2b1a4-01e4-407b-8a5a-75d7f3441451/deploy-status)](https://app.netlify.com/sites/portafolio-juan-pablo-medina/deploys)
+  ?branch= [![Netlify Status](https://api.netlify.com/api/v1/badges/4ee2b1a4-01e4-407b-8a5a-75d7f3441451/deploy-status)](https://test-astro-deploy-ci.netlify.app/)
 
 ## 📖 ¿Cómo Clonar Este Repositorio?
 
