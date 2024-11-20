@@ -14,7 +14,6 @@ import JavaScript from '../icons/JavaScript.astro';
 import Educacion from '../icons/Educacion.astro';
 import CardEducation from '../components/CardEducation.astro';
 import Galeria from '../components/Galeria.astro';
-import Sobremi from '../components/Sobremi.astro';
 import Mi from '../icons/Mi.astro';
 import Js from '../icons/Js.astro';
 import Phtml from '../components/Phtml.astro';
@@ -67,14 +66,36 @@ import Contacto from '../icons/Contacto.astro'
             <Titulo titulo="Proyectos">
 				<JavaScript />
 			</Titulo>
+
 			<Galeria
-			        href="https://juampimedina06.github.io/encriptador-texto/"
-			        github="https://github.com/juampimedina06/encriptador-texto"
-			        imagen="proyecto-alura.png" 
-			        titulo="Encriptador de Texto - Alura Latam" 
-					informacion="Proyecto desarrollado como challenge de Alura Latam. Permite encriptar y desencriptar mensajes de texto mediante un algoritmo personalizado. La interfaz es intuitiva y fácil de usar, enfocada en ofrecer una solución práctica y eficiente para la protección de mensajes..">
-				
-                    <div class="contenedor_lenguajes" slot="contenido-galeria">
+            github="https://github.com/juampimedina06/mercado-libre-week-"
+					href="https://mercado-libre-week.vercel.app/"
+			        imagen="mercado-week.png" 
+			        titulo="Mercado-week - challengue de alura" 
+					informacion="Mercado Week es una página web inspirada en Mercado Libre, creada como parte del desafío Alura Week. Utiliza HTML, CSS y JavaScript, con una API fake para gestionar productos."
+			>
+
+			<div class="contenedor_lenguajes" slot="contenido-galeria">
+				<Phtml lenguaje="Html">
+					<Html class="w-6"/>
+				</Phtml>
+				<Phtml lenguaje="Css">
+					<Css class="w-6" />
+				</Phtml>
+				<Phtml lenguaje="JavaScript">
+					<Js class="w-6" />
+				</Phtml>
+			</div>
+			</Galeria>
+
+			<Galeria 
+			        href="https://juampimedina06.github.io/obtener-clima/"
+			        github="https://github.com/juampimedina06/obtener-clima"
+			        imagen="proyecto-clima.png" 
+			        titulo="Obtener clima del Pais - API" 
+					informacion="aplicación interactiva que consulta una API de clima en tiempo real, proporcionando datos precisos como temperatura, condiciones meteorológicas y pronósticos..">
+
+					<div class="contenedor_lenguajes" slot="contenido-galeria">
                         <Phtml lenguaje="Html">
 							<Html class="w-6"/>
 						</Phtml>
@@ -87,14 +108,14 @@ import Contacto from '../icons/Contacto.astro'
 					</div>
 			</Galeria>
 
-			<Galeria 
-			        href="https://juampimedina06.github.io/obtener-clima/"
-			        github="https://github.com/juampimedina06/obtener-clima"
-			        imagen="proyecto-clima.png" 
-			        titulo="Obtener clima del Pais - API" 
-					informacion="aplicación interactiva que consulta una API de clima en tiempo real, proporcionando datos precisos como temperatura, condiciones meteorológicas y pronósticos..">
-
-					<div class="contenedor_lenguajes" slot="contenido-galeria">
+			<Galeria
+			        href="https://juampimedina06.github.io/encriptador-texto/"
+			        github="https://github.com/juampimedina06/encriptador-texto"
+			        imagen="proyecto-alura.png" 
+			        titulo="Encriptador de Texto - Alura Latam" 
+					informacion="Proyecto desarrollado como challenge de Alura Latam. Permite encriptar y desencriptar mensajes de texto mediante un algoritmo personalizado. La interfaz es intuitiva y fácil de usar, enfocada en ofrecer una solución práctica y eficiente para la protección de mensajes..">
+				
+                    <div class="contenedor_lenguajes" slot="contenido-galeria">
                         <Phtml lenguaje="Html">
 							<Html class="w-6"/>
 						</Phtml>
@@ -126,17 +147,36 @@ import Contacto from '../icons/Contacto.astro'
 						</Phtml>
 					</div>
 			</Galeria>
+
 		</SectionContainer> 
 
 		<SectionContainer id="SobreMi">
 			<Titulo titulo="SobreMi">
                 <Mi />
 			</Titulo>
-			<Sobremi 
-			    parrafo_one="Soy Juan Pablo Medina, nacido en Córdoba, Argentina 🇦🇷. Me dedico al desarrollo front-end y actualmente estoy en plena formación con Oracle en Alura Latam, donde continúo perfeccionando mis habilidades. Empecé mi camino en la programación con tecnologías como JavaScript, HTML y CSS, pero hoy trabajo con herramientas modernas como Astro y React para crear experiencias web más dinámicas y eficientes."
-				parrafo_two="Siempre estoy dispuesto a tomar riesgos y aprender algo nuevo, lo que me permitió crecer rápidamente y enfrentar desafíos técnicos en proyectos diversos. Además, tengo una mentalidad proactiva y me gusta trabajar en equipo, sabiendo que la colaboración es clave para lograr grandes resultados."
-				parrafo_three="En este momento, estoy enfocado en seguir mejorando mis habilidades como desarrollador, buscando proyectos que me permitan aplicar lo aprendido y seguir creciendo en este apasionante mundo del desarrollo web."
-			/>
+			
+			<div class="sobre-mi">
+				<p>
+				  <span>Soy Juan Pablo Medina</span>, nacido en Córdoba, Argentina 🇦🇷. Me dedico al 
+				  <span>desarrollo front-end</span> y actualmente estoy en plena formación con 
+				  <span>Oracle en Alura Latam</span>, donde sigo perfeccionando mis habilidades. 
+				  Empecé mi camino en la programación con <span>JavaScript</span>, <span>HTML</span> 
+				  y <span>CSS</span>, pero hoy trabajo con herramientas modernas como <span>Astro</span> 
+				  y <span>React</span> para crear experiencias web dinámicas y eficientes. 💻
+				</p>
+				<p>
+				  Siempre estoy dispuesto a <span>tomar riesgos</span> y <span>aprender algo nuevo</span>, 
+				  lo que me permitió crecer rápidamente y enfrentar desafíos técnicos en proyectos diversos. 
+				  Además, tengo una <span>mentalidad proactiva</span> y me encanta trabajar en equipo, 
+				  sabiendo que la <span>colaboración</span> es clave para lograr grandes resultados.
+				</p>
+				<p>
+				  En este momento, estoy enfocado en seguir mejorando mis habilidades como desarrollador, 
+				  buscando <span>proyectos desafiantes</span> que me permitan aplicar lo aprendido y seguir 
+				  creciendo en este apasionante mundo del <span>desarrollo web</span>.
+				</p>
+			  </div>
+			  
 		</SectionContainer>
 
 		<SectionContainer id="Habilidades">
@@ -204,6 +244,12 @@ import Contacto from '../icons/Contacto.astro'
 	p{
 		color: #fff;
 	}
+	div{
+		border: #fff;
+	}
+	span{
+	    color: #fff;
+	}
 
 	.contenedor_lenguajes{
         display: flex;
@@ -262,6 +308,34 @@ import Contacto from '../icons/Contacto.astro'
 	display: flex;
 	gap:1rem;
 }
+
+.sobre-mi {
+    line-height: 1.8;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .sobre-mi p {
+    margin-bottom: 1.5rem;
+  }
+
+  .sobre-mi span {
+    color: rgb(92, 76, 184);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .sobre-mi:hover{
+   span {
+    color: #a4a3f3; /* Cambia a un naranja al pasar el mouse */
+    text-decoration: none;
+    transform: scale(1.1);
+	text-shadow: none;
+  }
+}
+
 
 </style>
 
