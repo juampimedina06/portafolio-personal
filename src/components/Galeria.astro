@@ -6,29 +6,23 @@ const {imagen, titulo, informacion, href, github} = Astro.props;
 ---
 
     <div class="contenedor-proyecto">
-        <div class="contenedor_imagen">
-            <img class="rounded-lg" src={imagen} alt="imagen del proyecto">
-        </div>
-        <div class="contenedor_contenido">
-            <h2>{titulo}</h2>
-            <p>{informacion}</p>
-            <slot name="contenido-galeria" />
-            <div class="contenedor_links">
-                <a 
-                    class="github" 
-                    target="_blank" 
-                    href={github}><Github 
-                    class="h-10 w-6" />
-                    codigo
-                </a>
-                <a 
-                    class="link"
-                    target="_blank"  
-                    href={href}><Link class="h-10 w-7"/>
-                    Visitar
-                </a>
+        <a class="pagina" href={href} target="_blank">
+            <div class="contenedor_imagen">
+                <img class="rounded-lg" src={imagen} alt="imagen del proyecto">
             </div>
-        </div>
+            <div class="contenedor_contenido">
+                <h2>{titulo}</h2>
+                <p>{informacion}</p>
+                <slot name="contenido-galeria" />
+                    <a 
+                        class="github" 
+                        target="_blank" 
+                        href={github}><Github 
+                        class="h-10 w-6" />
+                        codigo
+                    </a>
+            </div>
+        </a>
     </div>
 
 <style>
@@ -107,7 +101,6 @@ const {imagen, titulo, informacion, href, github} = Astro.props;
 
     .contenedor_contenido{
         width: 100%;
-        padding: 1rem 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -132,23 +125,20 @@ const {imagen, titulo, informacion, href, github} = Astro.props;
         opacity: 90%;
     }
 
-    .contenedor_links{
-        display: flex;
-        flex-direction: row;
-        gap: 1.5rem;
-    }
-    a{
+    .github{
         display: flex;
         height: 2.3rem;
+        width: 8rem;
         gap: .7rem;
         align-items: center;
         border-radius: 1rem;
         padding: 0 1rem;
+        margin: 0 1rem 0 0;
         color:  rgba(119, 121, 238, 0.993);
         cursor: pointer;
         border: 1px solid  rgba(119, 121, 238, 0.993);
     }
-    a:hover{
+    .github:hover{
         background-color: rgba(66, 68, 160, 0.322);
         color: #fff;
         transition: .3s;
