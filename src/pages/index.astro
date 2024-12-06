@@ -22,6 +22,7 @@ import Conocimientos from '../components/Conocimientos.astro';
 import Habilidades from '../icons/Habilidades.astro';
 import Formulario from '../components/Formulario.astro';
 import Contacto from '../icons/Contacto.astro'
+import React from '../icons/React.astro';
 ---
 
 <Layout title="Portafolio de Juan Pablo Medina - Desarrollador y Programador Web">
@@ -66,6 +67,30 @@ import Contacto from '../icons/Contacto.astro'
             <Titulo titulo="Proyectos">
 				<JavaScript />
 			</Titulo>
+
+			<Galeria
+            github="https://github.com/juampimedina06/org"
+					href="https://org-delta-bay.vercel.app/"
+			        imagen="proyecto-org.png" 
+			        titulo="org - Pagina para org equipo" 
+					informacion="ORG pagina diseñada para organizar y gestionar equipos de trabajo de manera eficiente."
+			>
+
+			<div class="contenedor_lenguajes" slot="contenido-galeria">
+				<Phtml lenguaje="Html">
+					<Html class="w-6"/>
+				</Phtml>
+				<Phtml lenguaje="Css">
+					<Css class="w-6" />
+				</Phtml>
+				<Phtml lenguaje="JavaScript">
+					<Js class="w-6" />
+				</Phtml>
+				<Phtml lenguaje="React">
+					<React class="w-6" />
+				</Phtml>
+			</div>
+			</Galeria>
 
 			<Galeria
             github="https://github.com/juampimedina06/mercado-libre-week-"
