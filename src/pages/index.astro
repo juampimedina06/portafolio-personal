@@ -23,6 +23,8 @@ import Habilidades from '../icons/Habilidades.astro';
 import Formulario from '../components/Formulario.astro';
 import Contacto from '../icons/Contacto.astro'
 import React from '../icons/React.astro';
+import Tailwind from '../icons/Tailwind.astro';
+import Astroicono from '../icons/Astroicono.astro';
 ---
 
 <Layout title="Portafolio de Juan Pablo Medina - Desarrollador y Programador Web">
@@ -67,6 +69,30 @@ import React from '../icons/React.astro';
             <Titulo titulo="Proyectos">
 				<JavaScript />
 			</Titulo>
+
+			<Galeria
+            github="https://github.com/juampimedina06/doguito"
+					href="https://doguito-nine.vercel.app/"
+			        imagen="proyecto-doguito.png" 
+			        titulo="Doguito - Pagina sobre animales" 
+					informacion="Implemente componentes de React para manejar los datos y la presentación, utilizando el estado para gestionar la información mostrada.."
+			>
+
+			<div class="contenedor_lenguajes" slot="contenido-galeria">
+				<Phtml lenguaje="Html">
+					<Html class="w-6"/>
+				</Phtml>
+				<Phtml lenguaje="Css">
+					<Css class="w-6" />
+				</Phtml>
+				<Phtml lenguaje="JavaScript">
+					<Js class="w-6" />
+				</Phtml>
+				<Phtml lenguaje="React">
+					<React class="w-6" />
+				</Phtml>
+			</div>
+			</Galeria>
 
 			<Galeria
             github="https://github.com/juampimedina06/org"
@@ -154,11 +180,11 @@ import React from '../icons/React.astro';
 			</Galeria>
 
 			<Galeria
-			        github="https://github.com/juampimedina06/pagina-shark"
-					href="https://juampimedina06.github.io/pagina-shark/"
-			        imagen="proyecto-shark.png" 
-			        titulo="Copia estatica de pagina Shark" 
-					informacion="Este proyecto fue realizado como parte de la formación de Junior Achievement. Consiste en la clonación de una pagina web, replicando fielmente su diseño, estructura base los conocimientos adquiridos ">
+			        github="https://github.com/juampimedina06/portafolio-personal"
+					href="https://portafolio-juan-pablo-medina.netlify.app/"
+			        imagen="proyecto-portafolio.png" 
+			        titulo="Portafolio personal" 
+					informacion="Mi portafolio web es un proyecto desarrollado con Astro y Tailwind, diseñado para destacar mis habilidades como desarrollador front-end. Incluye una interfaz limpia y responsive, donde presento mis proyectos, experiencia y formación">
 
 					<div class="contenedor_lenguajes" slot="contenido-galeria">
                         <Phtml lenguaje="Html">
@@ -167,8 +193,11 @@ import React from '../icons/React.astro';
 						<Phtml lenguaje="Css">
 							<Css class="w-6" />
 						</Phtml>
-						<Phtml lenguaje="Bootstrap">
-							<Bostrap class="w-8 h-6" />
+						<Phtml lenguaje="Astro">
+							<Astroicono class="w-8 h-6" />
+						</Phtml>
+						<Phtml lenguaje="Tailwind">
+							<Tailwind class="w-8 h-6" />
 						</Phtml>
 					</div>
 			</Galeria>
